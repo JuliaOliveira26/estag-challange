@@ -1,5 +1,5 @@
-
 <?php
+header('Content-Type: application/json');
 error_log('Sou um log');
 echo "Olá mundo";
 
@@ -11,8 +11,11 @@ $pw = "root";
 
 $myPDO = new PDO("pgsql:host=$host;dbname=$db", $user, $pw);
 
+if ($myPDO -> connect_error) {
+    die(json_encode(["erro" => "Falha na conexão do banco"]));
+}
 // exemplo de insert
-$statement = $myPDO->prepare("INSERT INTO mytable (DESCRIPTION) VALUES ('TEST PHP')");
+/*$statement = $myPDO->prepare("INSERT INTO mytable (DESCRIPTION) VALUES ('TEST PHP')");
 $statement->execute();
 
 // exemplo de fetch
@@ -28,3 +31,5 @@ $data2 = $statement2->fetchALL();
 
 echo "<br>";
 print_r($data2);
+
+
