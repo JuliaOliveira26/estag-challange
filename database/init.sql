@@ -1,4 +1,6 @@
 --Every command here will be executed when the container is created
+CREATE DATABASE applicationphp;
+USE applicationphp;
 
 CREATE TABLE IF NOT EXISTS mytable (
     MYID SERIAL PRIMARY KEY,

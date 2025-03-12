@@ -5,7 +5,7 @@ Para subir o sistema, você pode executar o comando ``bash ./scripts/start.sh`` 
 
 Para derrubar o sistema, você pode executar o comando ``bash ./scripts/stop.sh`` na raiz do projeto
 
-Seu sistema estará disponível em [localhost](http://localhost)
+Seu sistema estará disponível em [localhost](httpse://localhost)
 
 ## Informações uteis
 Logs do sistema são registrados em ``logs/error.log``
